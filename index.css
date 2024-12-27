@@ -1,0 +1,93 @@
+body {
+  background-image: url(img/seamless-pattern-cute-swimming-capybaras-600nw-2360174865.webp);
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  height: 100vh; /* Ocupa a altura total da janela */
+  margin: 0; /* Remove margens */
+}
+
+.card {
+  width: 90%; /* Responsivo: ocupa 90% da largura em dispositivos móveis */
+  max-width: 500px; /* Máximo de 500px em telas grandes */
+  height: auto; /* Ajusta altura automaticamente */
+  background-image: url(img/istockphoto-2153094727-612x612.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 15px;
+  gap: 13px;
+  border-radius: 15px;
+  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Títulos e textos */
+.cookieHeading {
+  font-size: 2.5em;
+  font-family: 'Comic Sans MS', Comic Sans, cursive;
+  font-weight: bold;
+  color: rgb(1, 181, 187);
+  text-align: center;
+}
+
+.cookieDescription {
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: bold;
+  font-family: 'Comic Sans MS', Comic Sans, cursive;
+  color: rgb(1, 181, 187);
+}
+
+/* Botões */
+.buttonContainer {
+  display: flex;
+  gap: 20px;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.acceptButton, .declineButton {
+  width: 80px;
+  height: 40px;
+  font-size: 1em;
+  font-weight: bold;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  color: white;
+  transition: all 0.2s ease-in-out;
+}
+
+.acceptButton {
+  background-color: #51dd00;
+}
+
+.declineButton {
+  background-color: rgb(255, 0, 0);
+}
+
+.acceptButton:hover {
+  background-color: #094900;
+}
+
+.declineButton:hover {
+  background-color: #700000;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  .cookieHeading {
+      font-size: 2em; /* Reduz tamanho do título em dispositivos menores */
+  }
+  .cookieDescription {
+      font-size: 1em; /* Reduz tamanho da descrição */
+  }
+  .acceptButton, .declineButton {
+      width: 70px;
+      height: 35px;
+      font-size: 0.9em;
+  }
+}

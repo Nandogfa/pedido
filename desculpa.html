@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simoryes</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="card">
+         <p class="cookieHeading">Promessa</p>
+         <p class="cookieDescription">Aceitar se casar comigo quando tivermos 30 anos?</p>
+       
+         <div class="buttonContainer">
+           <button class="acceptButton">SIM</button>
+           <button class="declineButton">NÃO</button>
+         </div>
+         
+         <!-- Aqui os GIFs serão exibidos -->
+         <img id="gifAccept" src="smug-smirk-with-rose-emoticon-emoticon.gif" alt="Aceitou GIF" style="display: none; margin-top: 20px;" width="200">
+         <img id="gifDecline" src="no-emotiguy.gif" alt="Recusou GIF" style="display: none; margin-top: 20px;" width="200">
+       </div>       
+       
+    <script>
+        // Função para exibir o GIF ao clicar no botão "SIM"
+        const acceptButton = document.querySelector('.acceptButton');
+        const declineButton = document.querySelector('.declineButton');
+        const gifAccept = document.getElementById('gifAccept');
+        const gifDecline = document.getElementById('gifDecline');
+
+        acceptButton.addEventListener('click', () => {
+            gifAccept.style.display = 'block'; // Mostra o GIF "SIM"
+            gifDecline.style.display = 'none'; // Esconde o GIF "NÃO"
+        });
+
+        // Função para exibir o GIF ao clicar no botão "NÃO"
+        declineButton.addEventListener('click', () => {
+            gifDecline.style.display = 'block'; // Mostra o GIF "NÃO"
+            gifAccept.style.display = 'none'; // Esconde o GIF "SIM"
+        });
+    </script>
+</body>
+</html>
